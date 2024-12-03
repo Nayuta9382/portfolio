@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-
+// Tableで使用するhooks
+// ◆--tdタグの横幅を計算してretrunする--◆
 const UseTextWidth = (text: string, lineSize:1|2) => {
   const [windowWidth, setWindowWidth] = useState<number>(0); // 初期値として0
   const [textSize, setTextSize] = useState<number>(0);
@@ -36,8 +37,6 @@ const UseTextWidth = (text: string, lineSize:1|2) => {
 
         // 文字サイズ以外の必要な幅の計算(padding) 
         const paddingWidth = (windowWidth >= 768 ? 32 : 16);
-        console.log(textWidth);
-        // console.log(paddingWidth);
         
         const result = textWidth / lineSize  + paddingWidth + 10; // 10は微調整
         if (result !== textSize) {

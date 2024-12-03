@@ -32,7 +32,7 @@ const Td: FC<TdProps> = ({children,last,lastBottom, lineSize = 1}) => {
 
 
     return (
-        <td style={{ minWidth: `${textWidth}px`}} className={` w-2/5 text-base px-2 md:px-4 h-10 border-[#838181]  border-opacity-40  ${rightBoder} ${bottomBoder}`}>{children}</td>
+        <td style={{ minWidth: `${textWidth}px`}} className={` w-2/5 text-base py-1.5 px-2 md:px-4 h-10 border-[#838181]  border-opacity-40  ${rightBoder} ${bottomBoder}`}>{children}</td>
     );
 }
  
