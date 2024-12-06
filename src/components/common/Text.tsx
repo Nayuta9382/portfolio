@@ -12,12 +12,12 @@ const Text :React.FC<Props> = ({lavel = 'main', children}) => {
         case 'main':
           fontSize = 'text-base'
           weight = 'font-normal';
-          color = 'font-black';
+          color = 'to-black';
           break;
         case 'heading':
             fontSize = 'text-lg'// 'PC'の場合のフォントサイズ
             weight = 'font-bold';
-            color = 'font-black';
+            color = 'to-black';
           break;
       }
     
