@@ -13,9 +13,12 @@ export default {
         foreground: "var(--foreground)",
       },
       boxShadow: {
-        '3xl': '4px 4px 5px 0px rgba(0, 0, 0, 0.25)',
+        '3xl': '4px 4px 5px 0px rgba(0, 0, 0, 0.15)',
         'all-r': '1px 1px 3px 2.5px rgba(0, 0, 0, 0.25)',
       },
+      screens:{
+        'ss':'500px'
+      }
     },
   },
   plugins: [],
