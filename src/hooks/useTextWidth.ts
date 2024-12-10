@@ -12,7 +12,6 @@ const UseTextWidth = (text: string, lineSize:1|2) => {
 
         setWindowWidth(window.innerWidth); // 初期の画面幅を取得
 
-
       // 画面幅が変更された時に実行される処理
       const clacWidth = () => {
         // 必要項目一覧
