@@ -1,4 +1,5 @@
 import { useDbMenuContext } from "@/context/DbMenuContext";
+import { useDbMenuHiddenContext } from "@/context/DbMenuHiddenContext";
 import { dbMenuType } from "@/types/dbMenu";
 import { FC, useEffect, useState } from "react";
 
@@ -9,6 +10,9 @@ const DbMenuItem: FC<{dbImgData:dbMenuType}> = ({dbImgData}) => {
      const id = dbImgData ? dbImgData.id : 0; 
     // コンテキストから現在選択されている情報を取得
     const { dbMenu, setDbMenu } = useDbMenuContext();
+    // コンテキストから非表示の情報を受け取る
+    const {hiddenInfo} = useDbMenuHiddenContext();
+
 
     // 選択さえているかの情報を格納するState
     const [selectFlg, setSelectFlg] = useState<boolean>(false);
@@ -22,6 +26,9 @@ const DbMenuItem: FC<{dbImgData:dbMenuType}> = ({dbImgData}) => {
         }
     },[dbMenu]) 
 
+    
+    const hiddenFlg = hiddenInfo[2] !== undefined ? hiddenInfo[id].hiddenFlg : 0;
+
     // onClickで選択されたボタンを更新
     const selectClick = () => {
         setDbMenu(dbImgData); 
@@ -31,9 +38,10 @@ const DbMenuItem: FC<{dbImgData:dbMenuType}> = ({dbImgData}) => {
     const style = {
         'backgroundColor': selectFlg ? '#E6E6E6': '#FAFAFA',
         'font-weight': selectFlg ? 'bold' : 'normal',
+        'display': hiddenFlg ? 'none' : 'block',
     }
     return (
-        <button onClick={selectClick} style={style} className=" block  h-[50px] lg:h-[60px] px-3 text-base; lg:text-lg whitespace-nowrap hover:opacity-70 ">{dbImgData.name}</button>
+        <button onClick={selectClick} style={style} className=" h-[50px] lg:h-[60px] px-3 text-base; lg:text-lg whitespace-nowrap hover:opacity-70 bg-[#FAFAFA]">{dbImgData.name}</button>
     );
 }
  

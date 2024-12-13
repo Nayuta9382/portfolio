@@ -10,7 +10,7 @@ type dbMenuContextType = {
 const DbMenuContext = createContext<dbMenuContextType | undefined>(undefined)
 
 export const DbMenuProvider:FC<{children: ReactNode}> = ({children}) => {
-    const [dbMenu, setDbMenu] = useState<dbMenuType>( { id: 0, imgPath: '', name: '' });
+    const [dbMenu, setDbMenu] = useState<dbMenuType>( { id: 0, imgPath: '', name: '', hiddenFlg: false});
 
     return (
         // コンテキストでデータを共有
