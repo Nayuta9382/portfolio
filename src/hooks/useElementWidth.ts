@@ -1,15 +1,15 @@
 // ◆--要素の横幅を取得--◆
 import { useEffect, useRef, useState } from "react";
 
-export const useTableWidth = <T extends HTMLElement>() => {
-  const elementRef = useRef<T | null>(null); // 要素の参照
+export const useElementWidth = <T extends HTMLElement>() => {
+  const ref = useRef<T | null>(null); // 要素の参照
   const [width, setWidth] = useState<number>(0); // 横幅の状態
 
   useEffect(() => {
-    const element = elementRef.current;
+    const element = ref.current;
     
     if (!element) return;
-    console.log(elementRef);
+
     
     // ResizeObserver を使用してサイズ変更を監視
     const observer = new ResizeObserver(([entry]) => {
@@ -24,6 +24,6 @@ export const useTableWidth = <T extends HTMLElement>() => {
     return () => observer.disconnect();
   }, []);
 
-  return { elementRef, width }; // ref と横幅を返す
+  return { ref, width }; // ref と横幅を返す
 };
-export default useTableWidth;
+export default useElementWidth;

@@ -23,7 +23,7 @@ export const DbMenuHiddenProvider:FC<{children: ReactNode}> = ({children}) => {
 
 
 // カスタムフック
-export const useDbMenuHiddenContext = () : dbMenuHiddenContextType =>{
+export const useDbMenuHiddenContext =    () : dbMenuHiddenContextType =>{
     const context = useContext(DbMenuHiddenContext);
     if(!context){
         throw new Error('Contextが利用できません')
