@@ -16,10 +16,9 @@ const DbMenuItemMobile: FC<{dbImgData:dbMenuType, onClick:() => void}> = ({dbImg
     };
 
   
-    // windowSizeが 768以上で　選択されいる場合のみ　背景色を変更
-
+    // windowSizeが 768以下手表示表示される
     return (
-        <button onClick={selectClick} className="block  w-full  h-[50px] lg:h-[60px] pl-3 text-left text-base; lg:text-lg font-bold whitespace-nowrap hover:opacity-70">{dbImgData.name}</button>
+        <button onClick={selectClick} className="block  w-full  h-[50px] lg:h-[60px] pl-3 text-left text-base; lg:text-lg font-bold whitespace-nowrap hover:opacity-70 hover:bg-[rgba(40,39,39,0.02)]">{dbImgData.name}</button>
     );
 }
  

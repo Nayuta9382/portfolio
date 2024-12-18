@@ -30,7 +30,7 @@ const DbShowImg: FC<DbShowImgProps> = ({imgPath,upImgFlg,closeImg}) => {
             <button style={closeButtonStyle} onClick={closeImg} type="button" className="block absolute top-1 right-3 w-7 h-7">
                 <Image className="hover:opacity-80 active:opacity-70" src={'/img/icon/close.png'} alt="" width={28} height={28}/>
             </button>
-            <Image style={ImgStyle} className="w-[90%] h-auto m-auto mt-10" src={imgPath} alt="" width={100} height={100}   unoptimized={true}  quality={100}/>
+            <Image style={ImgStyle} className="w-[90%] md:w-full h-auto max-h-[500px] m-auto mt-10" src={imgPath} alt="" width={100} height={100}   unoptimized={true}  quality={100}/>
       </div>
     );
 }

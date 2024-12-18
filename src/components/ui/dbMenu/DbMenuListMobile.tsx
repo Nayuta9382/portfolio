@@ -2,6 +2,7 @@ import { dbMenuType } from "@/types/dbMenu";
 import { FC } from "react";
 import DbMenuItemMobile from "./DbMenuItemMobile";
 import useWindowSize from "@/hooks/useWindowSize";
+import Image from "next/image";
 
 type DbMenuListMobileProps = {
     dbImgData: dbMenuType[];
@@ -34,10 +35,11 @@ const DbMenuListMobile: FC<DbMenuListMobileProps> = ({ dbImgData, menuShowFlg, s
 
     return ( 
          <div className="w-full relative">
-            <div className="w-2/5  rounded-[10px] border-[#838181] border-[1.5px] border-opacity-40 bg-white">
+            <div className="flex relative items-center w-1/2 max-w-[230px]  rounded-[10px] border-[#838181] border-[1.5px] border-opacity-40 bg-white hover:opacity-70">
                 <button onClick={showMenu} style={buttonSytle} type="button" className=" w-full h-[45px] pl-3 font-bold text-left">画像を選択</button>
+                <Image className="block absolute right-1 opacity-70 w-9 h-9 pointer-events-none" src={'/img/icon/downArrow.png'} alt="arror.png" width={35} height={35}  unoptimized={true}  quality={100} />
             </div>
-            <div style={showMenuStyle} className="w-full pt-2 absolute  max-h-[70vh] overflow-hidden overflow-y-auto rounded-[10px] shadow-3xl bg-white">
+            <div style={showMenuStyle} className="w-4/5 sm:w-3/5  absolute  max-h-[70vh] overflow-hidden overflow-y-auto rounded-[10px] shadow-3xl bg-white ">
             {dbImgData.map((item) => (
                 <DbMenuItemMobile key={item.id} dbImgData={item} onClick={openImg} />
             ))}
