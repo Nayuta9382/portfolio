@@ -5,7 +5,7 @@ import { dbMenuType } from "@/types/dbMenu";
 import { FC, useEffect, useState } from "react";
 
 
-// db設計書のボタン部分 
+// db設計書のボタン部分 (768px以上)
 const DbMenuItemPc: FC<{dbImgData:dbMenuType}> = ({dbImgData}) => {
     const windowSize = useWindowSize();
 
@@ -40,7 +40,7 @@ const DbMenuItemPc: FC<{dbImgData:dbMenuType}> = ({dbImgData}) => {
     // windowSizeが 768以上で　選択されいる場合のみ　背景色を変更
     const style = {
         'backgroundColor': selectFlg &&  windowSizeFlg ? '#E6E6E6': '#FAFAFA',
-        'font-weight': selectFlg ? 'bold' : 'normal',
+        'fontWeight': selectFlg ? 'bold' : 'normal',
         'display': hiddenFlg ? 'none' : 'block',
     }
     return (

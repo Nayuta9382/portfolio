@@ -8,8 +8,8 @@ import useElementWidth from "@/hooks/useElementWidth";
 import useWindowSize from "@/hooks/useWindowSize";
 
 
-// db設計書のメニューリスト部分
-const DbMenuList: FC<{ dbImgData: dbMenuType[] }> = ({ dbImgData }) => {
+// db設計書のメニューリスト部分(768px以上とのとき)
+const DbMenuListPc: FC<{ dbImgData: dbMenuType[] }> = ({ dbImgData }) => {
     const maxCount = Math.ceil(dbImgData.length / 2);
     
     const windowSize = useWindowSize();
@@ -103,4 +103,4 @@ const DbMenuList: FC<{ dbImgData: dbMenuType[] }> = ({ dbImgData }) => {
     );
 };
 
-export default DbMenuList;
+export default DbMenuListPc;
