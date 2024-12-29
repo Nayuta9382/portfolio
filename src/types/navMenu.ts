@@ -1,5 +1,5 @@
 export type navMenu = {
-    id:number;
+    id:string;
     name:string;
     url:string
 }
