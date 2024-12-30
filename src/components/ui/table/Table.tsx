@@ -12,7 +12,7 @@ type TableProps = {
 const Table: FC<TableProps> = ({ item = "項目", description = "説明", children }) => {
 
   // hooksから要素の横幅を取得
-  const { elementRef, width } = useTableWidth<HTMLTableElement>();
+  const { ref, width } = useTableWidth<HTMLTableElement>();
 
   // Tableの横幅を共有するContextを受け取る　(Stateで管理)
   const {setTableWidth} = useTableWidthContext();
@@ -23,7 +23,7 @@ const Table: FC<TableProps> = ({ item = "項目", description = "説明", childr
   }, [width]); 
     
   return (
-    <table ref={elementRef} className="w-full bg-white rounded-lg border-opacity-40 border-[1.5px] border-[#838181] overflow-hidden border-separate border-spacing-0">
+    <table ref={ref} className="w-full bg-white rounded-lg border-opacity-40 border-[1.5px] border-[#838181] overflow-hidden border-separate border-spacing-0">
       <thead>
         <tr>
           <Th>{item}</Th>
