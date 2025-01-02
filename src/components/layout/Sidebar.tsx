@@ -4,12 +4,12 @@ import NavMenuList from "../ui/navMenu/NavMenuList";
 import { navMenu } from "@/types/navMenu";
 import ScrollTopButton from "../ui/navMenu/ScrollTopButton";
 
-interface SidebarLayoutProps {
+interface SidebarProps {
     titles:navMenu[];
     navInfo: navMenu[];
 }
  
-const SidebarLayout: FC<SidebarLayoutProps> = ({titles,navInfo}) => {
+const Sidebar: FC<SidebarProps> = ({titles,navInfo}) => {
     // Navメニューが閉じているか開いているかを格納するState
     const [openNavFlg, setOpenNavFlg] = useState(false);
     return (
@@ -21,4 +21,4 @@ const SidebarLayout: FC<SidebarLayoutProps> = ({titles,navInfo}) => {
     );
 }
  
-export default SidebarLayout;
+export default Sidebar;
