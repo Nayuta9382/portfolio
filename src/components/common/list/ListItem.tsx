@@ -5,7 +5,7 @@ type ListItemProps = {
 }
 const ListItem : FC<ListItemProps> = ({children}) => {
     return ( 
-        <li className=" text-base w-full font-normal">{children}</li>
+        <li className="text-base w-full font-normal">{children}</li>
     );
 }
  
