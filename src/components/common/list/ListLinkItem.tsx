@@ -1,6 +1,6 @@
 import { FC } from "react";
 import ListItem from "./ListItem";
-import LinkHoverBorder from "../LinkHoverBorder";
+import LinkHoverBorder from "./LinkHoverBorder";
 
 type ListLinkItemProps = {
     children: React.ReactNode;
