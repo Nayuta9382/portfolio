@@ -8,9 +8,9 @@ type ProfileItemProps = {
  
 const ProfileItem: FC<ProfileItemProps> = ({children,title}) => {
     return (    
-        <div className="pb-2 flex flex-col justify-center gap-1.5 border-b-2 border-black">
+        <div className="pb-3 pr-3 flex flex-col justify-center gap-1.5 border-b-2 border-black">
             <Text lavel="heading">{title}</Text>
-            <Text>{children}</Text>
+            {children}
         </div>
     );
 }
