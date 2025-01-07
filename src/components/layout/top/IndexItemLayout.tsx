@@ -6,7 +6,7 @@ type IndexItemLayoutProps = {
  
 const IndexItemLayout: FC<IndexItemLayoutProps> = ({children}) => {
     return (
-        <div className="pr-[35px] md:px-[45px] lg:px-[50px] ">
+        <div className="w-full pl-6 pr-[40px] md:pl-[45px] md:pr-[75px] lg:px-[75px] ">
             {children}
         </div>
     );
