@@ -24,6 +24,10 @@ const useSetShowId = () => {
         if (visibleHeight > maxArea) {
           maxArea = visibleHeight;
           mostVisible = element as HTMLElement;
+        }else if(maxArea === 0){
+          // 全てが表示さえれていないならからのidを設定
+          setNavShowId('');
+          return;
         }
       });
 
