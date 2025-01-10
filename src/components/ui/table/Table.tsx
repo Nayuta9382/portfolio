@@ -21,9 +21,16 @@ const Table: FC<TableProps> = ({ item = "項目", description = "説明", childr
   useEffect(() => {
     setTableWidth(width);
   }, [width]); 
+
+  useEffect(() => {
+    const a = () =>{
+      console.log(width);
+    }
+    a();
+  }, []); 
     
   return (
-    <table ref={ref} className="w-full bg-white rounded-lg border-opacity-40 border-[1.5px] border-[#838181] overflow-hidden border-separate border-spacing-0">
+    <table ref={ref} className="w-full  bg-white rounded-lg border-opacity-40 border-[1.5px] border-[#838181] overflow-hidden border-separate border-spacing-0">
       <thead>
         <tr>
           <Th>{item}</Th>

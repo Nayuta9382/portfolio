@@ -33,10 +33,11 @@ const Scroll: FC<ScrollProps> = ({ children }) => {
                 overflowX: undefined,
             });
         }
+    // }, [windowSize,width, tableWidth]); // tableWidthとwidthの両方を監視
     }, [windowSize,width, tableWidth]); // tableWidthとwidthの両方を監視
 
     return (
-        <div style={scrollStyle} ref={ref} className="">
+        <div style={scrollStyle} ref={ref}>
             {children}
         </div>
     );

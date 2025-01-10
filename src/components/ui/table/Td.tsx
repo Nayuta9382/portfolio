@@ -2,7 +2,7 @@ import UseTextWidth from "@/hooks/useTextWidth";
 import { FC, useEffect, useState } from "react";
 // lastはテーブルの右側の要素か
 // lastBootomはテーブルの一番下の要素か
-// lineSize は　何行か
+// lineSize は　文字列の行数を指定 (1行で改行なしか2行にするか) 項目は1行 説明は2行
 type TdProps = {
     children: React.ReactNode;  
     last?:boolean;
@@ -28,8 +28,6 @@ const Td: FC<TdProps> = ({children,last,lastBottom, lineSize = 1}) => {
      useEffect( () =>{
            setTextWidth(width);
      },[width]);
-
-
 
     return (
         <td style={{ minWidth: `${textWidth}px`}} className={` w-2/5 text-base py-1.5 px-2 md:px-4 h-10 border-[#838181]  border-opacity-40  ${rightBoder} ${bottomBoder}`}>{children}</td>
