@@ -1,4 +1,4 @@
-import {  useEffect } from 'react';
+import { useEffect } from 'react';
 import { useNavShowIdContext } from '@/context/NavShowIdContext';
 
 /**
@@ -9,7 +9,7 @@ const useSetShowId = () => {
   
   useEffect(() => {
     const handleScroll = () => {
-      let maxArea = 0;
+      let maxVisiblePercentage = 0;
       let mostVisible: HTMLElement | null = null;
 
       // .navクラスのすべての要素を取得
@@ -17,21 +17,28 @@ const useSetShowId = () => {
       
       elements.forEach((element) => {
         const rect = element.getBoundingClientRect();
+        
+        // 要素の高さ
+        const elementHeight = rect.height;
 
-        // 要素が画面に表示されている部分の高さを計算
+        // 要素が画面内に表示されている部分の高さ
         const visibleHeight = Math.max(0, Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0));
-        // 表示されている高さが最大の要素を選ぶ
-        if (visibleHeight > maxArea) {
-          maxArea = visibleHeight;
+
+        // 表示されている割合を計算
+        const visiblePercentage = (visibleHeight / elementHeight) * 100;
+
+        // 表示されている割合が最大の要素を選ぶ
+        if (visiblePercentage > maxVisiblePercentage) {
+          maxVisiblePercentage = visiblePercentage;
           mostVisible = element as HTMLElement;
-        }else if(maxArea === 0){
-          // 全てが表示さえれていないならからのidを設定
+        } else if (maxVisiblePercentage === 0) {
+          // 全てが表示されていないなら空のidを設定
           setNavShowId('');
           return;
         }
       });
 
-      // 最大の表示領域の要素があれば、そのIDをcontextに設定
+      // 最大の表示割合の要素があれば、そのIDをcontextに設定
       if (mostVisible) {
         setNavShowId(mostVisible.id);
       }

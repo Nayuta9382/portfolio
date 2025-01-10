@@ -13,7 +13,7 @@ const Sidebar: FC<SidebarProps> = ({titles,navInfo}) => {
     // Navメニューが閉じているか開いているかを格納するState
     const [openNavFlg, setOpenNavFlg] = useState(false);
     return (
-        <div className="fixed w-[75px] h-[100vh] top-0 right-0 z-50">
+        <div className="fixed w-[75px] h-[100vh] top-0 right-0 z-40">
             <NavButton openNavFlg={openNavFlg} setOpenNavFlg={setOpenNavFlg} />
             <ScrollTopButton/>
             <NavMenuList titles={titles} navInfo={navInfo} openNavFlg={openNavFlg} setOpenNavFlg={setOpenNavFlg}/>
