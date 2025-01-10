@@ -29,8 +29,6 @@ const ProfileLayout = () => {
                                         <span className="block ss:whitespace-nowrap">卒業</span>
                                     </div>
                                 </ListItem>
-                            </List>
-                            <List>
                                 <ListItem>
                                     <span className="ss:whitespace-nowrap">2023年4月</span><br/>
                                     <div className="flex flex-wrap w-full gap-x-1">
@@ -39,8 +37,6 @@ const ProfileLayout = () => {
                                         <span className="ss:whitespace-nowrap">入学</span>
                                     </div>
                                 </ListItem>
-                            </List>
-                            <List>
                                 <ListItem>
                                     <span className="ss:whitespace-nowrap">2027年3月</span><br/>
                                     <div className="flex flex-wrap w-full gap-x-1">
