@@ -26,7 +26,7 @@ const DbShowImg: FC<DbShowImgProps> = ({imgPath,upImgFlg,closeImg}) => {
       display : windowSize >= 768 || upImgFlg ? 'block' : 'none'
     }
     return (
-        <div style={imgDivStyle} className="bg-[rgb(125,125,125,0.6)]  fixed top-0 left-0  min-w-[99vw] min-h-[100vh] z-10 ">
+        <div style={imgDivStyle} className="bg-[rgb(125,125,125,0.6)]  fixed top-0 left-0  min-w-[99vw] min-h-[100vh] z-50 ">
             <button style={closeButtonStyle} onClick={closeImg} type="button" className="block absolute top-1 right-3 w-7 h-7">
                 <Image className="hover:opacity-80 active:opacity-70" src={'/img/icon/close.png'} alt="" width={28} height={28}/>
             </button>

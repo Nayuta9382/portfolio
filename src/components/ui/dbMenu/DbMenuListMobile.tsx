@@ -35,7 +35,7 @@ const DbMenuListMobile: FC<DbMenuListMobileProps> = ({ dbImgData, menuShowFlg, s
 
     return ( 
          <div className="w-full relative">
-            <div className="flex relative items-center w-1/2 max-w-[230px]  rounded-[10px] border-[#838181] border-[1.5px] border-opacity-40 bg-white hover:opacity-70">
+            <div className="flex relative items-center w-1/2 max-w-[230px] min-w-[150px]  rounded-[10px] border-[#838181] border-[1.5px] border-opacity-40 bg-white hover:opacity-70">
                 <button onClick={showMenu} style={buttonSytle} type="button" className=" w-full h-[45px] pl-3 font-bold text-left">画像を選択</button>
                 <Image className="block absolute right-1 opacity-70 w-9 h-9 pointer-events-none" src={'/img/icon/downArrow.png'} alt="arror.png" width={35} height={35}  unoptimized={true}  quality={100} />
             </div>

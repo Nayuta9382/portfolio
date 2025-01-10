@@ -67,7 +67,7 @@ const DbMenu: FC<{ dbImgData: dbMenuType[] ,firstHiddenData: dbMenuHiddenType[]}
   }
 
   return (
-    <div style={divStyle} className="py-7 px-6 rounded-[10px]">
+    <div style={divStyle} className="mt-2 md:py-7 md:px-6 rounded-[10px]">
       {windowSize >= 768 ?(
         // 768px以上の画面
         <DbMenuListPc dbImgData={dbImgData} />
