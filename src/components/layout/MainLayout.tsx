@@ -3,16 +3,16 @@ import Footer from "./Footer";
 import Sidebar from "./Sidebar";
 import { navMenu } from "@/types/navMenu";
 
-type MainProps = {
+type MainLayoutProps = {
     children: React.ReactNode; 
     navPageData:navMenu[]; // navに表示するページ情報
     navData:navMenu[]; // navに表示するHtmlId情報
 }
  
-const Main: FC<MainProps> = ({children,navPageData,navData}) => {
+const MainLayout: FC<MainLayoutProps> = ({children,navPageData,navData}) => {
     return (
         <>
-        <main className="relative w-full min-w-[355px] max-w-[1280px] mb-4">
+        <main className="relative w-full  min-w-[355px] max-w-[1280px] m-auto mb-4">
             {children}
             <Sidebar titles={navPageData} navInfo={navData} />
         </main>
@@ -21,4 +21,4 @@ const Main: FC<MainProps> = ({children,navPageData,navData}) => {
     );
 }
  
-export default Main;
+export default MainLayout;
