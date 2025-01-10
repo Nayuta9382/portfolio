@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+
 // Tableで使用するhooks
-// ◆--tdタグの横幅を計算してretrunする--◆
-const UseTextWidth = (text: string, lineSize:1|2) => {
+// ◆--tdタグの横幅を計算してreturnする--◆
+const UseTextWidth = (text: string, lineSize: 1 | 2) => {
   const [windowWidth, setWindowWidth] = useState<number>(0); // 初期値として0
   const [textSize, setTextSize] = useState<number>(0);
 
@@ -9,15 +10,13 @@ const UseTextWidth = (text: string, lineSize:1|2) => {
     // クライアントサイドでのみ実行
     if (typeof window !== "undefined") {
       // 初回実行: windowWidth の設定
-
-        setWindowWidth(window.innerWidth); // 初期の画面幅を取得
+      setWindowWidth(window.innerWidth); // 初期の画面幅を取得
 
       // 画面幅が変更された時に実行される処理
       const clacWidth = () => {
         // 必要項目一覧
         const fontSize = '16px';
         const fontFamily = 'Noto Serif JP, serif';
-        // const fontOpticalSizing = 'auto'; // フォントの光学サイズ
 
         // Canvas要素を作成
         const canvas = document.createElement('canvas');
@@ -34,10 +33,10 @@ const UseTextWidth = (text: string, lineSize:1|2) => {
           textWidth = text.length * 16;
         }
 
-        // 文字サイズ以外の必要な幅の計算(padding) 
-        const paddingWidth = (windowWidth >= 768 ? 32 : 16);
-        
-        const result = textWidth / lineSize  + paddingWidth + 10; // 10は微調整
+        // 文字サイズ以外の必要な幅の計算(padding)
+        const paddingWidth = windowWidth >= 768 ? 32 : 16;
+
+        const result = textWidth / lineSize + paddingWidth + 10; // 10は微調整
         if (result !== textSize) {
           setTextSize(result); // textSizeを更新
         }
@@ -58,8 +57,7 @@ const UseTextWidth = (text: string, lineSize:1|2) => {
         window.removeEventListener('resize', resizeListener);
       };
     }
-  }, [windowWidth]); // `windowWidth` 
-
+  }, []); // `windowWidth`を依存配列から外す
 
   return textSize;
 };
