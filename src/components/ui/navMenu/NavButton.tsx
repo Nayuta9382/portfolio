@@ -27,13 +27,13 @@ const NavButton:FC<NavButtonProps> = ({openNavFlg,setOpenNavFlg}) => {
     },[hover])
 
     return (
-        <button type="button" onClick={menuOnClose}  onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className="w-9 sm:w-11 lg:w-[50px] pt-3 pb-4 sm:rounded-l-[px]5 rounded-l-[10px] bg-[#372A28] fixed top-[10%] right-0 hover:opacity-90  active:opacity-80">
+        <button type="button" onClick={menuOnClose}  onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className="w-9 sm:w-11 lg:w-[50px] pt-3 pb-4 sm:rounded-l-[px]5 rounded-l-[10px] bg-[#372A28] absolute top-[10%] right-0 hover:opacity-90  active:opacity-80">
             <Image  src={"/img/icon/menu.png"} alt="" width={10} height={10} className="block w-1/2 m-auto mb-1.5 "/>
             <p className="text-white">
-                <span className="block h-[16px] lg:h-[22px] text-base lg:text-lg">M</span>
-                <span className="block h-[18px] lg:h-[22px] text-base lg:text-lg">e</span>
-                <span className="block h-[18px] lg:h-[22px] text-base lg:text-lg">n</span>
-                <span className="block h-[18px] lg:h-[22px] text-base lg:text-lg">u</span>
+                <span className="block h-[16px] md:h-[18px] lg:h-[22px] text-base lg:text-lg">M</span>
+                <span className="block h-[18px] md:h-[20px] lg:h-[22px] text-base lg:text-lg">e</span>
+                <span className="block h-[18px] md:h-[20px] lg:h-[22px] text-base lg:text-lg">n</span>
+                <span className="block h-[18px] md:h-[20px] lg:h-[22px] text-base lg:text-lg">u</span>
             </p>
         </button>
     );

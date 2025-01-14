@@ -8,7 +8,7 @@ const useSetShowId = () => {
   const { setNavShowId } = useNavShowIdContext();
   
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = () => {      
       let maxVisiblePercentage = 0;
       let mostVisible: HTMLElement | null = null;
 
@@ -16,7 +16,7 @@ const useSetShowId = () => {
       const elements = document.querySelectorAll('.nav');
       
       elements.forEach((element) => {
-        const rect = element.getBoundingClientRect();
+        const rect = element.getBoundingClientRect();        
         
         // 要素の高さ
         const elementHeight = rect.height;
@@ -28,10 +28,10 @@ const useSetShowId = () => {
         const visiblePercentage = (visibleHeight / elementHeight) * 100;
 
         // 表示されている割合が最大の要素を選ぶ
-        if (visiblePercentage > maxVisiblePercentage) {
+        if (visiblePercentage > 30 && visiblePercentage > maxVisiblePercentage) {
           maxVisiblePercentage = visiblePercentage;
           mostVisible = element as HTMLElement;
-        } else if (maxVisiblePercentage === 0) {
+        }else if (maxVisiblePercentage === 0) {
           // 全てが表示されていないなら空のidを設定
           setNavShowId('');
           return;

@@ -4,7 +4,6 @@ import NavTitle from "./NavTitle";
 import { navMenu } from "@/types/navMenu";
 import { v4 as uuidv4 } from 'uuid';
 import Image from "next/image";
-import useSetShowId from "@/hooks/useSetShowId";
 
 type NavMenuListProps = {
     titles: navMenu[];
@@ -16,9 +15,7 @@ type NavMenuListProps = {
 const NavMenuList: FC<NavMenuListProps> = ({titles, navInfo,openNavFlg,setOpenNavFlg}) => {
      // Navメニューのホバー情報を格納する
     const [hover, setHover] = useState(false);
-    // 現在最も表示されている要素をnavに設定する
-    const setShowId = useSetShowId();
-   
+
     // メニューを閉じる関数
     const closeMenu = () => {
         // hoverをfalseにした下のuseEfectでメニューを非表示にする
@@ -65,7 +62,6 @@ const NavMenuList: FC<NavMenuListProps> = ({titles, navInfo,openNavFlg,setOpenNa
     };
 
     return (
-        // <nav style={style}  onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className="sidebar  h-[100vh] w-[200px] md:w-[250px] pt-14 bg-[#372A28] ">
         <nav style={style}  onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className={` fixed top-0 h-[100vh] w-[200px] md:w-[250px] pt-14 bg-[#372A28]`}>
             <button onClick={closeMenu} className="block hover:opacity-70 active:opacity-60" type="button">
                 <Image className=" absolute top-4 right-4 w-7 h-7" src='/img/icon/close.png' alt="closeImg" width={10} height={10}  unoptimized={true}  quality={100} />
