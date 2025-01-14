@@ -18,7 +18,7 @@ const SkillLayout = () => {
                     <SkillItem imgName="css.svg" alt="css.svg" name="CSS" starCount={4}/>
                     <SkillItem imgName="tailwindcss.svg" alt="tailwindcss.svg" name="tailwindcss" smName="tailwind"  starCount={3}/>
                     <SkillItem imgName="JavaScript.svg" alt="javaScript.svg" name="JavaScript" starCount={4}/>
-                    <SkillItem imgName="typesScript.svg" alt="typeScript.svg" name="TypeScript" starCount={3}/>
+                    <SkillItem imgName="typescript.svg" alt="typeScript.svg" name="TypeScript" starCount={3}/>
                     <SkillItem imgName="docker.svg" alt="docker.svg" name="docker" starCount={2}/>
                     <SkillItem imgName="next.js.svg" alt="next.js.svg" name="Next.js" starCount={3}/>
                 </div>
