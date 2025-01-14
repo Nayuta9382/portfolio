@@ -1,4 +1,4 @@
-import Main from "@/components/layout/Main";
+import MainLayout from "@/components/layout/MainLayout";
 import ProfileLayout from "@/components/layout/top/ProfileLayout";
 import SkillLayout from "@/components/layout/top/SkillLayout";
 import TopMenuLayout from "@/components/layout/top/TopMenuLayout";
@@ -14,7 +14,7 @@ export default function Home() {
   ];
  
   return (  
-    <Main navPageData={navPageData} navData={navData}>
+    <MainLayout navPageData={navPageData} navData={navData}>
       <IndexTopImg/>
       <div className="mt-20 flex flex-col gap-16">
         <TopMenuLayout/>
@@ -22,6 +22,6 @@ export default function Home() {
         <SkillLayout/>
         <WorksLayout/>
       </div>
-    </Main>
+    </MainLayout>
   );
 }
