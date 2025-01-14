@@ -40,6 +40,7 @@ const useSetShowId = () => {
 
       // 最大の表示割合の要素があれば、そのIDをcontextに設定
       if (mostVisible) {
+        // @ts-expect-error 型の推論が難しいため
         setNavShowId(mostVisible.id);
       }
     };

@@ -9,7 +9,7 @@ import IndexItemLayout from "./IndexItemLayout";
 
 const ProfileLayout = () => {
     return (
-        <div id="profile" className="nav pt-6 md:pt-10 relative  bg-[url('/img/Profile-bg.png')] bg-fixed bg-cover  bg-no-repeat">
+        <div id="profile" className="nav pt-6 md:pt-10 relative  bg-[url('/img/profile-bg.png')] bg-fixed bg-cover  bg-no-repeat">
             <IndexItemLayout>
                 <H2>Profile</H2>
                 <div className="md:flex gap-[4%] my-6 md:my-10 pl-[5%] md:pl-0 w-full px-4">
