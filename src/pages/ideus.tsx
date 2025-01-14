@@ -12,6 +12,7 @@ import OperationInfo from "@/components/layout/worksPage/OperationInfo";
 import WorksPageItemLayout from "@/components/layout/worksPage/WorksPageItemLayout";
 import WorskPageLayout from "@/components/layout/worksPage/WorksPageLayout";
 import WorksTopView from "@/components/layout/worksPage/WorksTopView";
+import ImageZoomView from "@/components/ui/imageZoom/ImageZoomView";
 import Td from "@/components/ui/table/Td";
 import TableOfContents from "@/components/ui/TableOfContents";
 
@@ -216,7 +217,7 @@ export default function Home() {
         <DesignDocumentsLayout>
           {/* システム全体図 */}
           <DesignDocumentsItemLayout htmlId={designDocuments[0].id} heading={designDocuments[0].name}>
-            <Text>※省略</Text>
+            <ImageZoomView imgPath={"/img/ideus/ER.png"} />
           </DesignDocumentsItemLayout>
           {/* ユースケース図 */}
           <DesignDocumentsItemLayout htmlId={designDocuments[1].id} heading={designDocuments[1].name}>

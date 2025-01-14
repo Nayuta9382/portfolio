@@ -8,7 +8,7 @@ type ImageZoomProps = {
     closeImg : () => void;
 }
 
-// 画像を拡大表示するcomponent
+// 画像を拡大表示する
 const ImageZoom: FC<ImageZoomProps> = ({imgPath, showImgFlg, closeImg}) => {
 
     const style  = {

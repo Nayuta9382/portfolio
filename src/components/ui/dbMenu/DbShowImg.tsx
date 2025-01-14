@@ -1,7 +1,7 @@
 import useWindowSize from "@/hooks/useWindowSize";
 import Image from "next/image";
 import { FC } from "react";
-import ImageZoom from "../ImageZoom";
+import ImageZoom from "../imageZoom/ImageZoom";
 
 interface DbShowImgProps {
     imgPath: string;
