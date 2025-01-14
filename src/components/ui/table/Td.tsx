@@ -3,14 +3,16 @@ import { FC, useEffect, useState } from "react";
 // lastはテーブルの右側の要素か
 // lastBootomはテーブルの一番下の要素か
 // lineSize は　文字列の行数を指定 (1行で改行なしか2行にするか) 項目は1行 説明は2行
+// paddingは微調整のpaddingを渡すときに使用
 type TdProps = {
     children: React.ReactNode;  
     last?:boolean;
     lastBottom?:boolean;
     lineSize?: 1 | 2
+    padding?:number;
 }
  
-const Td: FC<TdProps> = ({children,last,lastBottom, lineSize = 1}) => {
+const Td: FC<TdProps> = ({children,last,lastBottom, lineSize = 1, padding=10}) => {
      // ラストのみボーダー取り消し
      const rightBoder = last ? '' : 'border-r-[1.5px] ';
      const bottomBoder = lastBottom ? '' : ' border-b-[1.5px] ';
@@ -24,7 +26,7 @@ const Td: FC<TdProps> = ({children,last,lastBottom, lineSize = 1}) => {
        textContent = children; // 文字列を変数に格納
      }
    //   hooksから横幅を取得
-     const width = UseTextWidth(textContent, lineSize);
+     const width = UseTextWidth(textContent, lineSize, padding);
      useEffect( () =>{
            setTextWidth(width);
      },[width]);

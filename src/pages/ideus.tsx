@@ -198,7 +198,7 @@ export default function Home() {
           </tr>
           <tr>
             <Td>エスケープ処理</Td>
-            <Td last lineSize={2}>HTML特殊文字をエスケープする(LaravelのBladeテンプレートエンジンを使用)</Td>
+            <Td last lineSize={2} padding={20}>HTML特殊文字をエスケープする(LaravelのBladeテンプレートエンジンを使用)</Td>
           </tr>
           <tr>
             <Td>SQLインジェクション対策</Td>
