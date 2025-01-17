@@ -10,7 +10,7 @@ const WorksLayout = () => {
                 <H2>Works</H2>
                 <div className="pt-4 md:mt-5 lg:mt-2 sm:pl-[5%] md:pl-[2%] lg:pl-[3%] flex flex-wrap  flex-col sm:flex-row ss:gap-[8%] md:gap-[5%] lg:gap-[8%]">
                     <WorksItem title="Ideus" text="ひとり暮らし情報共有アプリ" link="/ideus" imgPath="/img/ideus/ideus.png" openFlg />
-                    <WorksItem title="Ideus" text="ひとり暮らし情報共有アプリ" link="/ideus" imgPath="/img/ideus/ideus.png" />
+                    <WorksItem title="Portfolio" text="Next.jsで作成したPortfolio" link="/" imgPath="/img/portfolio.png" />
                     <WorksItem title="Ideus" text="ひとり暮らし情報共有アプリ" link="/ideus" imgPath="/img/ideus/ideus.png" />
                     <WorksItem title="Ideus" text="ひとり暮らし情報共有アプリ" link="/ideus" imgPath="/img/ideus/ideus.png" />
                     <WorksItem title="Ideus" text="ひとり暮らし情報共有アプリ" link="/ideus" imgPath="/img/ideus/ideus.png" />
