@@ -80,17 +80,17 @@ const DbMenuListPc: FC<{ dbImgData: dbMenuType[] }> = ({ dbImgData }) => {
     }
 
     const mostListStyle = {
-       'display' : windowSize > 768 ?  'block' : 'none'
+       'display' : windowSize >= 768 ?  'block' : 'none'
     }
 
     const menuListStyle = {
-        'display' : windowSize > 768 ?  'flex' : 'block'
+        'display' : windowSize >= 768 ?  'flex' : 'block'
     }
    
 
     return (
         <div style={mostListStyle} ref={menuRef} className="h-[50px] lg:h-[60px] relative shadow-all-sm overflow-hidden rounded-[10px] bg-[#FAFAFA]">
-                <div  style={menuListStyle} ref={itemListDivRef} className=" w-fit">
+            <div  style={menuListStyle} ref={itemListDivRef} className=" w-fit">
                 {dbImgData.map((item) => (
                     <DbMenuItemPc key={item.id} dbImgData={item}  />
                 ))}
