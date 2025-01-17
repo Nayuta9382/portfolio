@@ -20,7 +20,7 @@ const OperationInfo: FC<OperationInfoProps> = ({children, url, eMail, password})
             <div className="pl-6 pt-3 pb-2 flex flex-col gap-4">
                 <div className="flex flex-col gap-2">
                     <Text lavel="heading">公開先URL</Text>
-                    <Link className="w-fil ml-4 text-[#0969DA] text-base md:text-lg" href={url}  rel="noopener noreferrer" target="_blank">{url}</Link>
+                    <Link className="w-fil ml-4 text-[#0969DA] text-base md:text-lg hover:opacity-70 active:opacity-60" href={url}  rel="noopener noreferrer" target="_blank">{url}</Link>
                 </div>
                 <div className="flex flex-col gap-2 md:gap-3">
                     <Text lavel="heading">テストアカウント情報</Text>
