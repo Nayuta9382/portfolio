@@ -5,6 +5,7 @@ import { navMenu } from "@/types/navMenu";
 import ScrollTopButton from "../ui/navMenu/ScrollTopButton";
 import useShowSidebar from "@/hooks/useShowSidebar";
 import useSetShowId from "@/hooks/useSetShowId";
+import useWindowSize from "@/hooks/useWindowSize";
 
 interface SidebarProps {
     titles:navMenu[];
@@ -16,6 +17,8 @@ const Sidebar: FC<SidebarProps> = ({titles,navInfo}) => {
     const [openNavFlg, setOpenNavFlg] = useState(false);
     // サイドバーの表示・非表示を受け取る
     const showSidebar = useShowSidebar();
+
+    const windowSize = useWindowSize();
 
     // navメニューの表示されているのを選択するhooks関数を実行
     useSetShowId();
@@ -51,12 +54,15 @@ const Sidebar: FC<SidebarProps> = ({titles,navInfo}) => {
             setRight(0);
         }
     },[]);
-    const style = {
-        right: `${right}px`
-    };
+    const style: React.CSSProperties = {
+        position: (right < 0 || windowSize >1280) ? ('fixed' as const) : ('absolute' as const),
+        right: `${right}px`, 
+      };
+    
+
 
     return (
-        <div style={style} className="w-[75px] pb-2 absolute right-0 top-0 h-full ">
+        <div style={style} className="w-[75px] pb-2  right-0 top-0 h-full ">
             <div className=" sticky w-full h-[100vh] top-0 right-0 z-40 ">
                 <NavButton right={right} openNavFlg={openNavFlg} setOpenNavFlg={setOpenNavFlg} />
                 <ScrollTopButton/>
