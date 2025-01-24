@@ -56,10 +56,12 @@ const Sidebar: FC<SidebarProps> = ({titles,navInfo}) => {
     };
 
     return (
-        <div style={style} className="fixed w-[75px] h-[100vh] top-0 right-0 z-40">
-            <NavButton openNavFlg={openNavFlg} setOpenNavFlg={setOpenNavFlg} />
-            <ScrollTopButton/>
-            <NavMenuList titles={titles} navInfo={navInfo} openNavFlg={openNavFlg} setOpenNavFlg={setOpenNavFlg}/>
+        <div style={style} className="w-[75px] pb-2 absolute right-0 top-0 h-full ">
+            <div className=" sticky w-full h-[100vh] top-0 right-0 z-40 ">
+                <NavButton right={right} openNavFlg={openNavFlg} setOpenNavFlg={setOpenNavFlg} />
+                <ScrollTopButton/>
+                <NavMenuList titles={titles} navInfo={navInfo} openNavFlg={openNavFlg} setOpenNavFlg={setOpenNavFlg}/>
+            </div>
         </div>
     );
 }

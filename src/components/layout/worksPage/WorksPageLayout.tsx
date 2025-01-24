@@ -13,7 +13,7 @@ const WorskPageLayout: FC<WorskPageLayoutProps> = ({children, navPageData, navDa
  
     return (
         <MainLayout navPageData={navPageData} navData={navData}>
-            <div className="mt-5 pl-[25px] pr-[68px] md:pl-[40px]  md:pr-[75px] lg:px-[90px] flex flex-col gap-4 md:gap-5 lg:gap-6">
+            <div className="pt-5 pb-[70px] pl-[25px] pr-[68px] md:pl-[40px]  md:pr-[75px] lg:px-[90px] flex flex-col gap-4 md:gap-5 lg:gap-6">
                 {children}
             </div>
         </MainLayout>

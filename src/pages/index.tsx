@@ -15,12 +15,14 @@ export default function Home() {
  
   return (  
     <MainLayout navPageData={navPageData} navData={navData}>
-      <IndexTopImg/>
-      <div className="mt-20 flex flex-col gap-16">
-        <TopMenuLayout/>
-        <ProfileLayout/>
-        <SkillLayout/>
-        <WorksLayout/>
+      <div className="pb-[70px]">
+        <IndexTopImg/>
+        <div className="mt-20 flex flex-col gap-16">
+          <TopMenuLayout/>
+          <ProfileLayout/>
+          <SkillLayout/>
+          <WorksLayout/>
+        </div>
       </div>
     </MainLayout>
   );
