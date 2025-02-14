@@ -44,11 +44,11 @@ export default function Home() {
   // DB設計書のデータ
   const dbData = [
     { id: 0, name: 'ER図', imgPath: '/img/ideus/ER.png', hiddenFlg: false },
-    { id: 1, name: 'テーブル一覧', imgPath: '/img/skill-icon/c.svg', hiddenFlg: false },
-    { id: 2, name: 'アカウントテーブル', imgPath: '/img/ideus/ER.png', hiddenFlg: false },
-    { id: 3, name: '投稿テーブル', imgPath: '/img/ideus/ER.png', hiddenFlg: false },
-    { id: 4, name: 'コメントテーブル', imgPath: '/img/ideus/ER.png', hiddenFlg: false },
-    { id: 5, name: 'タグテーブル', imgPath: '/img/ideus/ER.png', hiddenFlg: false },
+    { id: 1, name: 'テーブル一覧', imgPath: '/img/ideus/table.png', hiddenFlg: false },
+    { id: 2, name: 'ユーザーテーブル', imgPath: '/img/ideus/user.png', hiddenFlg: false },
+    { id: 3, name: '投稿テーブル', imgPath: '/img/ideus/post.png', hiddenFlg: false },
+    { id: 4, name: 'コメントテーブル', imgPath: '/img/ideus/comment.png', hiddenFlg: false },
+    { id: 5, name: 'タグテーブル', imgPath: '/img/ideus/tag.png', hiddenFlg: false },
   ];
 
   // ナビゲーションメニューでのhtmlidをつけるところには　classに navを書く

@@ -33,7 +33,6 @@ const ProfileLayout = () => {
                                     <span className="ss:whitespace-nowrap">2023年4月</span><br/>
                                     <div className="flex flex-wrap w-full gap-x-1">
                                         <span className="ss:whitespace-nowrap">盛岡情報ビジネス＆デザイン専門学校</span>
-                                        <span className="ss:whitespace-nowrap">高度情報工学科</span>
                                         <span className="ss:whitespace-nowrap">入学</span>
                                     </div>
                                 </ListItem>
