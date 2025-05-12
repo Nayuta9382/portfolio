@@ -12,15 +12,14 @@ import OperationInfo from "@/components/layout/worksPage/OperationInfo";
 import WorksPageItemLayout from "@/components/layout/worksPage/WorksPageItemLayout";
 import WorskPageLayout from "@/components/layout/worksPage/WorksPageLayout";
 import WorksTopView from "@/components/layout/worksPage/WorksTopView";
-import ImageZoomView from "@/components/ui/imageZoom/ImageZoomView";
 import Td from "@/components/ui/table/Td";
 import TableOfContents from "@/components/ui/TableOfContents";
 
 export default function Home() {
   // このページのurl
-  const url = '/ideus';
+  const url = '/ABCDE';
   // Topと このページの情報を格納
-  const navPageData = [{id:'',name:'Top',url:'/'},{id:'',name:'Ideus',url:url}];
+  const navPageData = [{id:'',name:'Top',url:'/'},{id:'',name:'ABCDE',url:url}];
   // ナビゲーションメニューに格納したい情報を格納
   const navData = [
     { id: 'history', name: '開発経緯', url: url },
@@ -54,7 +53,7 @@ export default function Home() {
   // ナビゲーションメニューでのhtmlidをつけるところには　classに navを書く
   return (  
     <WorskPageLayout navData={navData} navPageData={navPageData}>
-      <WorksTopView title="Ideus" text="ひとり暮らしで役に立った知識、悩みや不安を共有し合うアプリ" imgPath="/img/ideus/ideus-top.png"/>
+      <WorksTopView title="ABCDE" text="授業情報を共有する掲示板アプリ" imgPath="/img/ideus/ideus-top.png"/>
 
       {/* 操作情報 */}
       <OperationInfo url="https://morijyobi.ac.jp" eMail="morijyobi.ac.jp" password="password">
@@ -97,9 +96,10 @@ export default function Home() {
       {/* 開発経緯 */}
     <WorksPageItemLayout htmlId={navData[0].id} title={navData[0].name}>
         <Text>
-          &emsp;2・3年生による共同開発で、「一人暮らしを助け合う」をテーマにしたWebアプリケーションを開発しました。
-          チームでの話し合いの中で、「生活の知恵を共有できる機能」や「一人暮らしで役に立った知識や悩み、不安を分かち合える仕組み」という案が出ました。<br/>
-          &emsp;その案をもとに、ひとり暮らしの方々が知識や経験、悩みを投稿・閲覧しながら助け合えるアプリを開発しました。
+          &emsp;2・3年生でのハッカソンで「履修登録を支援するシステム」をテーマにWEBアプリケーションを開発することになりました。
+          チームでの話し合いの中で授業についての掲示板機能の他、連絡機能・時間割りを一つのアプリケーションで実装するという案が出ました。<br/>
+          &emsp;その案をもとに、「授業情報を共有する掲示板アプリ」を開発しました。
+          このアプリケーションを利用することで履修登録だけでなく日常生活でも便利に活用できると考えました。
         </Text>
       </WorksPageItemLayout>
 
@@ -108,7 +108,7 @@ export default function Home() {
         <TableLayout>
           <tr>
             <Td>開発時期</Td>
-            <Td last lineSize={2}>2024年8月</Td>
+            <Td last lineSize={2}>2025年4月</Td>
           </tr>
           <tr>
             <Td>開発期間</Td>
@@ -116,7 +116,7 @@ export default function Home() {
           </tr>
           <tr>
             <Td lastBottom>開発人数</Td>
-            <Td last lastBottom lineSize={2}>4人</Td>
+            <Td last lastBottom lineSize={2}>5人</Td>
           </tr>
         </TableLayout>
       </WorksPageItemLayout>
@@ -126,7 +126,7 @@ export default function Home() {
         <TableLayout>
           <tr>
             <Td>ターゲットユーザー</Td>
-            <Td last lineSize={2}>一人暮らしをしている若者(20代)</Td>
+            <Td last lineSize={2}>盛岡情報ビジネス＆デザイン専門学校に所属する学生</Td>
           </tr>
           <tr>
             <Td>利用端末</Td>
@@ -144,39 +144,43 @@ export default function Home() {
         <TableLayout item="機能名">
           <tr>
             <Td>ログイン・ログアウト機能</Td>
-            <Td last lineSize={2}>メールアドレス・パスワードによるログインができる</Td>
+            <Td last lineSize={2}>メールアドレス又はid・パスワードによるログインができる</Td>
           </tr>
           <tr>
             <Td>アカウント管理機能</Td>
             <Td last lineSize={2}>アカウントの追加・編集・削除ができる</Td>
           </tr>
           <tr>
-            <Td>投稿管理機能</Td>
-            <Td last lineSize={2}>投稿の追加・編集・削除ができる</Td>
+            <Td>生徒・教師アカウント一括追加機能</Td>
+            <Td last lineSize={2}>csvファイルによる生徒・教師のアカウント情報を一括追加できる</Td>
           </tr>
           <tr>
-            <Td>投稿の一覧表示機能</Td>
-            <Td last lineSize={2}>投稿の一覧を表示できる</Td>
+            <Td>授業情報管理機能</Td>
+            <Td last lineSize={2}>授業情報の追加・編集・削除ができる</Td>
           </tr>
           <tr>
-            <Td>投稿詳細表示機能</Td>
-            <Td last lineSize={2}>投稿の詳細情報を表示できる</Td>
+            <Td>授業情報閲覧機能</Td>
+            <Td last lineSize={2}>各ユーザが授業情報を閲覧できる</Td>
           </tr>
           <tr>
-            <Td>コメント機能</Td>
-            <Td last lineSize={2}>投稿にコメントができる</Td>
+            <Td>授業ページ検索機能</Td>
+            <Td last lineSize={2}>授業ページの検索ができる</Td>
           </tr>
           <tr>
-            <Td>投稿検索機能</Td>
-            <Td last lineSize={2}>投稿者・投稿名による検索ができる</Td>
+            <Td>教師コメント機能</Td>
+            <Td last lineSize={2}>教師が授業の進捗情報をコメントできる</Td>
           </tr>
           <tr>
-            <Td>いいね機能</Td>
-            <Td last lineSize={2}>投稿にいいねができる</Td>
+            <Td>生徒コメント機能</Td>
+            <Td last lineSize={2}>生徒が授業ページにコメントができる</Td>
           </tr>
           <tr>
-            <Td lastBottom>画像アップロード機能</Td>
-            <Td last lastBottom lineSize={2}>投稿に画像を添付し、サーバに保存できる</Td>
+            <Td>時間割情報管理機能</Td>
+            <Td last lineSize={2}>管理者が時間割情報を追加・編集削除できる</Td>
+          </tr>
+          <tr>
+            <Td lastBottom>お気に入り機能</Td>
+            <Td last lastBottom lineSize={2}>生徒・教師が授業ページをお気に入り登録できる</Td>
           </tr>
         </TableLayout>
       </WorksPageItemLayout>
@@ -206,7 +210,7 @@ export default function Home() {
           </tr>
           <tr>
             <Td lastBottom>認可</Td>
-            <Td last lastBottom lineSize={2}>一部の機能はユーザーがログインした際のみ利用できる</Td>
+            <Td last lastBottom lineSize={2}>各ユーザごとにページへのアクセス・機能の利用を制御する</Td>
           </tr>
         </TableLayout>
       </WorksPageItemLayout>
@@ -216,7 +220,7 @@ export default function Home() {
         <DesignDocumentsLayout>
           {/* システム全体図 */}
           <DesignDocumentsItemLayout htmlId={designDocuments[0].id} heading={designDocuments[0].name}>
-            <ImageZoomView imgPath={"/img/ideus/ER.png"} />
+            <Text>※省略</Text>
           </DesignDocumentsItemLayout>
           {/* ユースケース図 */}
           <DesignDocumentsItemLayout htmlId={designDocuments[1].id} heading={designDocuments[1].name}>
@@ -259,7 +263,7 @@ export default function Home() {
           </tr>
           <tr>
             <Td>データベース</Td>
-            <Td last lineSize={2}>MariaDB</Td>
+            <Td last lineSize={2}>MySQL</Td>
           </tr>
           <tr>
             <Td>開発ツール</Td>

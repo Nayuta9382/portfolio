@@ -49,7 +49,7 @@ const ProfileLayout = () => {
                         <ProfileItem title="趣味">
                             <List>
                                 <ListItem>ゲーム</ListItem>
-                                <ListItem>お菓子鑑賞</ListItem>
+                                <ListItem>お菓子を食べること</ListItem>
                             </List>
                         </ProfileItem>
                         <ProfileItem title="資格">

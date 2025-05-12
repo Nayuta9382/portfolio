@@ -8,7 +8,6 @@ import { dbMenuHiddenType } from "@/types/dbMenuHidden";
 
 //  db設計書のレイアウト部分
 const DbMenuLayout: FC<{ dbImgData: dbMenuType[] }> = ({ dbImgData }) => {
-    // const { dbMenu, setDbmenu } = useDbMenuContext();
     // hidden用の初期のデータを格納
     const heddinData:dbMenuHiddenType[] = [{id:0,hiddenFlg:false}];
     for(let i = 1; i < dbImgData.length; i++){
