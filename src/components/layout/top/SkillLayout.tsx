@@ -15,7 +15,6 @@ const SkillLayout = () => {
         <div id="skill" className="nav py-6 md:pt-10 relative  bg-[url('/img/skill-bg.png')] bg-fixed bg-cover  bg-no-repeat">
             <IndexItemLayout>
                 <H2>Skill</H2>
-                {/* <div className="w-[95%] sm:w-4/5 md:w-2/3 lg:w-full sm:m-auto mt-4  ss:mt-0 md:pl-[30px] lg:pl-0 pr-2 md:pr-0 lg:pr-4 flex flex-wrap justify-center gap-[8%] gap-y-2 ss:gap-y-1 sm:gap-[10%] sm:gap-y-2  md:gap-[15%] md:gap-y-5 lg:gap-y-4 lg:gap-[10%]"> */}
                 <div className="w-[300px] ss:w-[70%] sm:w-2/3 md:w-2/3 lg:w-[85%] m-auto mt-4  ss:mt-0 md:pl-[30px] lg:pl-0 pr-2 md:pr-0 lg:pr-4 flex flex-wrap justify-start ss:justify-between md:justify-start gap-[12%] ss:gap-[8%] gap-y-2 ss:gap-y-1 sm:gap-[10%] sm:gap-y-2  md:gap-[15%] md:gap-y-5 lg:gap-y-4 lg:gap-[11%]">
                     <SkillItem imgName="java.svg" alt="java.svg" name="Java" starCount={5}/>
                     <SkillItem imgName="c.svg" alt="c.svg" name="C" starCount={3}/>

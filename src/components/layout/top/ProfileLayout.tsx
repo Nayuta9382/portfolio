@@ -14,7 +14,7 @@ const ProfileLayout = () => {
                 <H2>Profile</H2>
                 <div className="md:flex gap-[4%] my-6 md:my-10 pl-[5%] md:pl-0 w-full px-4">
                     <div className="w-[70%] sm:w-1/2  md:w-[35%] mb-7 md:mb-0">
-                        <Image className=" block sticky top-8 md:m-auto md:mt-4 w-4/5 h-auto border-black  border-[1.5px] rounded-[20px]" src="/img/person.png" alt="profileImg" width={100} height={100}  unoptimized={true}  quality={100}   />
+                        <Image className=" block sticky top-8 md:m-auto md:mt-4 w-4/5 h-auto border-gray-400  border-[1.5px] rounded-[20px]" src="/img/n-logo.png" alt="profileImg" width={100} height={100}   quality={70}   />
                     </div>
                     <div className="w-[90%] md:w-[60%] flex flex-col gap-4">
                         <ProfileItem title="氏名"><Text>熊谷奈友多</Text></ProfileItem>
