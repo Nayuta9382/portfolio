@@ -43,7 +43,7 @@ const SkillItem: FC<SkillItemProps> = ({imgName, alt, name, smName, starCount}) 
         }
     }
     return (
-        <div className="flex gap-x-[3%] w-[42%]  ss:w-[42%] sm:w-2/5 md:w-[40%] lg:w-[26%]  min-w-[122px] h-[12vw] sm:h-[11vw] md:h-[10vw] min-h-14 pb-1.5 ss:pb-[2px] sm:pb-0 border-b-2 border-black">
+        <div className="flex gap-x-[3%] w-[42%]  ss:w-[42%] sm:w-2/5 md:w-[40%] lg:w-[26%]  min-w-[122px] h-[12vw] sm:h-[11vw] md:h-[10vw] min-h-14 max-h-[115px] pb-1.5 ss:pb-[2px] sm:pb-0 border-b-2 border-black">
             {/* eslint-disable @next/next/no-img-element */}
             <Image src={`/img/skill-icon/${imgName}`} alt={alt} className="block w-[30%]  min-h-12" width={10} height={10} quality={50} />
             <div className="flex flex-col justify-center gap-y-[6%] pr-[4%] pt-[2%]">
