@@ -2,6 +2,7 @@ import ListLinkItem from "@/components/common/list/ListLinkItem";
 import Ol from "@/components/common/list/Ol";
 import Text from "@/components/common/Text";
 import TableLayout from "@/components/layout/TableLayout";
+import AccessInfo from "@/components/layout/worksPage/AccessInfo";
 import WorksPageItemLayout from "@/components/layout/worksPage/WorksPageItemLayout";
 import WorskPageLayout from "@/components/layout/worksPage/WorksPageLayout";
 import WorksTopView from "@/components/layout/worksPage/WorksTopView";
@@ -27,6 +28,10 @@ export default function Home() {
   return (  
     <WorskPageLayout navData={navData} navPageData={navPageData}>
       <WorksTopView title="Portfolio" text="Next.js・TypeScriptで作成した自己紹介サイト" imgPath="/img/portfolio.png"/>
+
+      {/* アクセス情報 */}
+      <AccessInfo deployUrl="https://portfolio-kohl-eight-29.vercel.app/" gitHubUrl="https://github.com/Nayuta9382/portfolio" />
+
 
       {/* 目次 */}
       <WorksPageItemLayout htmlId="menu" title="目次" navFlg={false}>
