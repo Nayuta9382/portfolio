@@ -83,7 +83,7 @@ export default function Home() {
           </tr>
           <tr>
             <Td lastBottom>ブラウザ</Td>
-            <Td last lastBottom lineSize={2}>動作確認済みブラウザ (Chrome・Microsoft Edge)</Td>
+            <Td last lastBottom lineSize={2} padding={40}>動作確認済みブラウザ (Chrome・Microsoft Edge)</Td>
           </tr>
         </TableLayout>
       </WorksPageItemLayout>
@@ -96,7 +96,7 @@ export default function Home() {
           </tr>
           <tr>
             <Td>開発言語</Td>
-            <Td last lineSize={2}>HTML・CSS・TypeScript</Td>
+            <Td last lineSize={2} padding={30}>HTML・CSS・TypeScript</Td>
           </tr>
           <tr>
             <Td>フレームワーク</Td>

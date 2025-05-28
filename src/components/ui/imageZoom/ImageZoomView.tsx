@@ -18,7 +18,7 @@ const ImageZoomView: FC<ImageZoomViewProps> = ({imgPath}) => {
     };
     return (
         <div className="w-full">
-            <Image onClick={openImg} className="block w-full h-auto cursor-pointer hover:opacity-80 active:opacity-70" src={imgPath} alt="" width={100} height={100}   unoptimized={true}  quality={100}/>
+            <Image onClick={openImg} className="block w-[85%] h-auto mt-1 cursor-pointer hover:opacity-80 active:opacity-70 border-[1.5px] border-[#838181] border-opacity-40 rounded-[10px]" src={imgPath} alt="" width={100} height={100}   unoptimized={true}  quality={100}/>
             <ImageZoom imgPath={imgPath} showImgFlg={showImgFlg} closeImg={closeImg}/>
         </div>
     );

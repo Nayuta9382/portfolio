@@ -12,7 +12,7 @@ const DesignDocumentsItemLayout: FC<DesignDocumentsItemLayoutProps> = ({htmlId, 
     return (
         <div id={htmlId} className="flex flex-col gap-2">
             <Text lavel="heading">{heading}</Text>
-            <div className="pl-4">
+            <div className="pl-5">
                 {children}
             </div>
         </div>

@@ -8,7 +8,6 @@ import DbMenuLayout from "@/components/layout/DbMenuLayout";
 import TableLayout from "@/components/layout/TableLayout";
 import DesignDocumentsItemLayout from "@/components/layout/worksPage/designDocuments/DesignDocumentsItemLayout";
 import DesignDocumentsLayout from "@/components/layout/worksPage/designDocuments/DesignDocumentsLayout";
-import OperationInfo from "@/components/layout/worksPage/OperationInfo";
 import WorksPageItemLayout from "@/components/layout/worksPage/WorksPageItemLayout";
 import WorskPageLayout from "@/components/layout/worksPage/WorksPageLayout";
 import WorksTopView from "@/components/layout/worksPage/WorksTopView";
@@ -55,17 +54,6 @@ export default function Home() {
     <WorskPageLayout navData={navData} navPageData={navPageData}>
       <WorksTopView title="ABCDE" text="授業情報を共有する掲示板アプリ" imgPath="/img/ideus/ideus-top.png"/>
 
-      {/* 操作情報 */}
-      <OperationInfo url="https://morijyobi.ac.jp" eMail="morijyobi.ac.jp" password="password">
-          <List>
-            <ListItem>URLにアクセスするとログイン前トップ画面が表示されます。</ListItem>
-            <ListItem>「ログイン」ボタンを選択しメールアドレス、パスワードを入力するとログイン後トップ画面に遷移します。</ListItem>
-            <ListItem>投稿機能、いいね機能、コメント機能はログイン時のみ利用できます。</ListItem>
-            <ListItem>「質問」、「共有」ボタンを選択することで表示される投稿を切り替えることができます。</ListItem>
-            <ListItem>投稿上部のタグを選択することで投稿をタグごとにフィルタリングすることができます</ListItem>
-            <ListItem>投稿一覧のタイトル(太字文字)を選択することで投稿の詳細ページに遷移します。</ListItem>
-          </List>
-      </OperationInfo>
 
       {/* 目次 */}
       <WorksPageItemLayout htmlId="menu" title="目次" navFlg={false}>

@@ -142,7 +142,7 @@ export default function Home() {
             <Td last lineSize={2}>投稿の追加・編集・削除ができる</Td>
           </tr>
           <tr>
-            <Td>投稿の一覧表示機能</Td>
+            <Td>投稿一覧表示機能</Td>
             <Td last lineSize={2}>投稿の一覧を表示できる</Td>
           </tr>
           <tr>
@@ -175,25 +175,25 @@ export default function Home() {
             <Td>認証</Td>
             <Td last lineSize={2}>LaravelのAuthの利用</Td>
           </tr>
+           <tr>
+            <Td>認可</Td>
+            <Td lineSize={2}>一部の機能はユーザーがログインした際のみ利用できる</Td>
+          </tr>
           <tr>
             <Td>パスワードのハッシュ化</Td>
-            <Td last lineSize={2}>ユーザーが登録するパスワードをハッシュ化し保存</Td>
+            <Td last lineSize={2}>パスワードをハッシュ化し保存</Td>
+          </tr>
+          <tr>
+            <Td>XSS対策</Td>
+            <Td last lineSize={2} padding={20}>HTML特殊文字をエスケープする(LaravelのBladeテンプレートエンジンを使用)</Td>
           </tr>
           <tr>
             <Td>CSRF対策</Td>
             <Td last lineSize={2}>CSRFトークンの利用(LaravelのCSRF対策機能を利用)</Td>
           </tr>
           <tr>
-            <Td>エスケープ処理</Td>
-            <Td last lineSize={2} padding={20}>HTML特殊文字をエスケープする(LaravelのBladeテンプレートエンジンを使用)</Td>
-          </tr>
-          <tr>
-            <Td>SQLインジェクション対策</Td>
-            <Td last lineSize={2}>プレースホルダの利用(LaravelのEloquent ORMを利用)</Td>
-          </tr>
-          <tr>
-            <Td lastBottom>認可</Td>
-            <Td last lastBottom lineSize={2}>一部の機能はユーザーがログインした際のみ利用できる</Td>
+            <Td lastBottom>SQLインジェクション対策</Td>
+            <Td last lastBottom  lineSize={2}>プレースホルダの利用(LaravelのEloquent ORMを利用)</Td>
           </tr>
         </TableLayout>
       </WorksPageItemLayout>
@@ -238,7 +238,7 @@ export default function Home() {
           </tr>
           <tr>
             <Td>開発言語</Td>
-            <Td last lineSize={2}>PHP・HTML・CSS・JavaScript</Td>
+            <Td last lineSize={2}>HTML・CSS・JavaScript・PHP</Td>
           </tr>
           <tr>
             <Td>フレームワーク</Td>
@@ -253,7 +253,7 @@ export default function Home() {
             <Td last lineSize={2}>Visual Studio Code</Td>
           </tr>
           <tr>
-            <Td>バージョン管理ツール</Td>
+            <Td last>バージョン管理ツール</Td>
             <Td last lastBottom lineSize={2}>Git・GitHub</Td>
           </tr>
         </TableLayout>
