@@ -129,7 +129,7 @@ export default function Home() {
           </tr>
           <tr>
             <Td lastBottom>ブラウザ</Td>
-            <Td last lastBottom lineSize={2}>動作確認済みブラウザ (Chrome・Microsoft Edge)</Td>
+            <Td last lastBottom lineSize={2} padding={30}>動作確認済みブラウザ (Chrome・Microsoft Edge)</Td>
           </tr>
         </TableLayout>
       </WorksPageItemLayout>
