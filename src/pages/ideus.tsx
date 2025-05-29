@@ -51,7 +51,7 @@ export default function Home() {
 
   // ナビゲーションメニューでのhtmlidをつけるところには　classに navを書く
   return (  
-    <WorskPageLayout navData={navData} navPageData={navPageData}>
+    <WorskPageLayout navData={navData} navPageData={navPageData} subTitle="Ideus">
       <WorksTopView title="Ideus" text="ひとり暮らしで役に立った知識、悩みや不安を共有し合うアプリ" imgPath="/img/ideus/ideus-top.png"/>
 
 

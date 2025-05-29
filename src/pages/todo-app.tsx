@@ -50,7 +50,7 @@ export default function Home() {
 
   // ナビゲーションメニューでのhtmlidをつけるところには　classに navを書く
   return (  
-    <WorskPageLayout navData={navData} navPageData={navPageData}>
+    <WorskPageLayout navData={navData} navPageData={navPageData} subTitle="Todo-App">
       <WorksTopView title="Todo-App" text="セキュリティを意識して開発したTodoアプリ" imgPath="/img/todo-app/todo-app-top.png"/>
 
       {/* アクセス情報 */}

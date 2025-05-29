@@ -26,7 +26,7 @@ export default function Home() {
 
   // ナビゲーションメニューでのhtmlidをつけるところには　classに navを書く
   return (  
-    <WorskPageLayout navData={navData} navPageData={navPageData}>
+    <WorskPageLayout navData={navData} navPageData={navPageData} subTitle="Portfolio">
       <WorksTopView title="Portfolio" text="Next.js・TypeScriptで作成した自己紹介サイト" imgPath="/img/portfolio.png"/>
 
       {/* アクセス情報 */}
