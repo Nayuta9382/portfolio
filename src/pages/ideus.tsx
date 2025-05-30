@@ -253,7 +253,7 @@ export default function Home() {
             <Td last lineSize={2}>Visual Studio Code</Td>
           </tr>
           <tr>
-            <Td last>バージョン管理ツール</Td>
+            <Td lastBottom>バージョン管理ツール</Td>
             <Td last lastBottom lineSize={2}>Git・GitHub</Td>
           </tr>
         </TableLayout>
