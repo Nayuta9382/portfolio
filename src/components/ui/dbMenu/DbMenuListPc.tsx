@@ -44,11 +44,7 @@ const DbMenuListPc: FC<{ dbImgData: dbMenuType[] }> = ({ dbImgData }) => {
         opacity: clickCount=== maxCount - 1 ? '40%' : '100%'
     }
 
-    // useEffect(() => {
-    //     if (dbImgData && dbImgData.length > 0) {
-    //         setDbMenu(dbImgData[0]); // 初回のみ0番目の初期データをセット
-    //     }
-    // }, []); 
+
     
     // clickCountが変更したら非表示の値を変更する
     useEffect( () => {

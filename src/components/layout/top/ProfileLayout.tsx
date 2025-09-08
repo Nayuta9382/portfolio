@@ -55,7 +55,14 @@ const ProfileLayout = () => {
                         <ProfileItem title="資格">
                             <List>
                                 <ListItem>基本情報技術者試験</ListItem>
+                                <ListItem>応用情報技術者試験</ListItem>
+                                <ListItem>AWS Certified Cloud Practitioner</ListItem>
                                 <ListItem>日本商工会議所簿記検定試験2級</ListItem>
+                            </List>
+                        </ProfileItem>
+                        <ProfileItem title="大会">
+                            <List>
+                                <ListItem><span className="ss:whitespace-nowrap">若年者ものづくり競技大会</span> <span className="ss:whitespace-nowrap">業務用ITソフトウェア・ソリューションズ職種</span></ListItem>
                             </List>
                         </ProfileItem>
                     </div>
