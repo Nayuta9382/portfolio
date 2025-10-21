@@ -63,7 +63,7 @@ const ProfileLayout = () => {
                         <ProfileItem title="大会">
                             <List>
                                 <ListItem><span className="ss:whitespace-nowrap">若年者ものづくり競技大会</span> <span className="ss:whitespace-nowrap">業務用ITソフトウェア・ソリューションズ職種</span></ListItem>
-                                <ListItem><span className="ss:whitespace-nowrap">ETロボコン</span><span className="ss:whitespace-nowrap">プライマリークラス</span><span className="ss:whitespace-nowrap">東北地区大会</span></ListItem>
+                                <ListItem><span className="ss:whitespace-nowrap">ETロボコン</span> <span className="ss:whitespace-nowrap">プライマリークラス</span> <span className="ss:whitespace-nowrap">東北地区大会</span></ListItem>
                             </List>
                         </ProfileItem>
                     </div>
