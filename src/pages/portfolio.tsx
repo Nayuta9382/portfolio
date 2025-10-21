@@ -112,7 +112,7 @@ export default function Home() {
           </tr>
           <tr>
             <Td lastBottom>デプロイ環境</Td>
-            <Td last lastBottom lineSize={2}>省略(公開時に追記)</Td>
+            <Td last lastBottom lineSize={2}>Vercel</Td>
           </tr>
         </TableLayout>
      </WorksPageItemLayout>
