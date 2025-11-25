@@ -12,6 +12,7 @@ const WorksLayout = () => {
                     <WorksItem title="Ideus" text="ひとり暮らし情報共有アプリ" link="/ideus" imgPath="/img/ideus/ideus.png" />
                     <WorksItem title="Portfolio" text="自己紹介サイト" link="/portfolio" imgPath="/img/portfolio.png" />
                     <WorksItem title="Todo-App" text="Todoアプリ" link="/todo-app" imgPath="/img/todo-app/todo-app.png" openFlg />
+                    <WorksItem title="Class-Room" text="課題提出アプリ" link="/class-room" imgPath="/img/class-room/class-room.png" />
                 </div>
             </IndexItemLayout>
         </div>
