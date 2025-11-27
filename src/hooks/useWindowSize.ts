@@ -22,7 +22,7 @@ const useWindowSize = () => {
     
     }
 
-    },[windowSize]);
+    },[]);
     return windowSize;
 }
  
